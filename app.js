@@ -7,7 +7,7 @@ var app = express();
 app.use(logger("short"));
 
 app.use(function(request, response){
-		console.log("vinee");
+		console.log("koder");
 		response.send("logged in");
 	
 }).listen(52280);
