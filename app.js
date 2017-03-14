@@ -1,16 +1,13 @@
 var express = require("express");
+var logger = require("morgan");
 var http = require("http");
 
 var app = express();
 
-
-app.use(function(request, response, next){
-	console.log("request received from "+request.url);
-	next();
-});
+app.use(logger("short"));
 
 app.use(function(request, response){
-	
-	response.send("hellod")
+		console.log("vinee");
+		response.send("logged in");
 	
 }).listen(52280);
