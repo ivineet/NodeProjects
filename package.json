@@ -1,8 +1,0 @@
-{
-"name": "hello-world",
-"author": "vineet",
-"private": true,
-"dependencies": {
-"express": "^5.0.0"
-}
-}
