@@ -5,16 +5,26 @@ var http = require("http");
 
 var app = express();
 
-var publicPath = path.resolve(__dirname, "public");
-app.use(express.static(publicPath));
+//var publicPath = path.resolve(__dirname, "public");
+//app.use(express.static(publicPath));
+
+app.set("views", path.resolve(__dirname, "views"));
+app.set("view engine","ejs");
 
 app.use(logger("short"));
 
 //routing using express
-app.get("/",function(request, response){
+/*app.get("/",function(request, response){
 	console.log("homepage");
 	response.send("Welcome to homepage");
 	
+});
+*/
+
+app.get("/", function(request, response) {
+response.render("index", {
+message: "Hey everyone! This is my webpage."
+});
 });
 
 //usage of express redirect method
