@@ -17,9 +17,22 @@ app.get("/",function(request, response){
 	
 });
 
+//usage of express redirect method
+app.get("/google",function(request, response){
+	console.log("google homepage");
+	response.redirect("https://www.google.com/");
+	
+});
+
 app.get("/aboutus",function(request, response){
-	console.log("about us page");
+	console.log("about us page ");
 	response.send("About us");
+	
+});
+
+app.get("/aboutus/:who",function(request, response){
+	console.log("about us page ");
+	response.send("About us"+ request.params.who);
 	
 });
 
