@@ -1,0 +1,14 @@
+{
+  "name": "rest_api_versioning",
+  "version": "1.0.0",
+  "description": "Rest api versioning",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vineet",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
